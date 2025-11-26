@@ -1,17 +1,4 @@
-# Proyecto completo listo para subir a Vercel
 
-A continuación tienes **la estructura del proyecto completa**, con todos los archivos necesarios para desplegar tu sitio en Vercel.
-
-Incluye:
-- Frontend en React + Vite
-- API interna para pagos (`/api/checkout.js`)
-- Página con productos, categorías, carrito, WhatsApp y mapa
-- Configuración para Vercel
-
----
-
-## 📁 **Estructura del proyecto**
-```
 mi-tienda/
 │  index.html
 │  vercel.json
@@ -29,7 +16,7 @@ mi-tienda/
 ```
 
 ---
-# 📌 **1. package.json**
+#  **1. package.json**
 ```json
 {
   "name": "mi-tienda",
@@ -50,7 +37,7 @@ mi-tienda/
 ```
 
 ---
-# 📌 **2. vite.config.js**
+#  **2. vite.config.js**
 ```js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
@@ -61,7 +48,7 @@ export default defineConfig({
 ```
 
 ---
-# 📌 **3. vercel.json**
+#  **3. vercel.json**
 ```json
 {
   "version": 2,
@@ -77,7 +64,7 @@ export default defineConfig({
 ```
 
 ---
-# 📌 **4. index.html**
+#  **4. index.html**
 ```html
 <!DOCTYPE html>
 <html lang="es">
@@ -95,7 +82,7 @@ export default defineConfig({
 ```
 
 ---
-# 📌 **5. src/main.jsx**
+#  **5. src/main.jsx**
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -106,7 +93,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 ```
 
 ---
-# 📌 **6. src/data/products.js**
+#  **6. src/data/products.js**
 ```js
 export const products = [
   { id: "p1", title: "Camiseta oficial", category: "Ropa", price: 45000, description: "Camiseta 100% algodón.", image: null },
@@ -116,7 +103,7 @@ export const products = [
 ```
 
 ---
-# 📌 **7. src/styles.css** (Tailwind básico simulado)
+#  **7. src/styles.css** (Tailwind básico simulado)
 ```css
 body {
   margin: 0;
@@ -139,7 +126,7 @@ body {
 ```
 
 ---
-# 📌 **8. src/App.jsx** (versión compacta del sitio)
+#  **8. src/App.jsx** (versión compacta del sitio)
 ```jsx
 import React, { useState } from "react";
 import { products } from "./data/products";
@@ -209,7 +196,7 @@ export default function App() {
 ```
 
 ---
-# 📌 **9. api/checkout.js** (Backend en Vercel)
+#  **9. api/checkout.js** (Backend en Vercel)
 ```js
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ message: "Método no permitido" });
@@ -227,11 +214,3 @@ export default async function handler(req, res) {
 ```
 
 ---
-
-# ✅ **Listo para subir directamente a Vercel**
-Si quieres, te preparo:
-- archivo .zip descargable
-- versión con Tailwind completo
-- integración real con Sistecrédito y Addi
-
-¿Quieres que te genere **el archivo .ZIP listo para descargar**?
